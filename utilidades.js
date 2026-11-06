@@ -24,3 +24,4 @@ function limpiar() {
 function quitarTildes(texto) {
   return texto.normalize("NFD").replace(/[̀-ͯ]/g, "");
 }
+

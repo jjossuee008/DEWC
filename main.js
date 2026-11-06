@@ -169,6 +169,11 @@ function analizarFechas() {
   let fechaHoy = new Date(Date.now());
   ficha.edad = fechaHoy.getFullYear() - año;
   mostrar(`<p>Edad: ${ficha.edad}</p>`);
+  
+  const milisegundos = Date.parse(fechaNacimiento);
+  diferenciaMilisegundos = Date.now() - milisegundos;
+  const dias = diferenciaMilisegundos / (1000 * 60 * 60 * 24);
+  mostrar(`<p>Dias vivido: ${Math.floor(dias)}</p>`);
 }
 
 // 4. VENTANAS ----------------------------------------------------------
